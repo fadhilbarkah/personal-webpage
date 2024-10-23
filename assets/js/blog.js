@@ -1,7 +1,7 @@
-      // Initialize Contentful Client
-      const client = contentful.createClient({
+    // Initialize Contentful Client
+    const client = contentful.createClient({
         space: 'lwdvl28ri311',
-        accessToken: '${API_KEY}'
+        accessToken: '__CONTENTFUL_ACCESS_TOKEN__'  // Gunakan placeholder khusus
     });
 
     // Format date function
