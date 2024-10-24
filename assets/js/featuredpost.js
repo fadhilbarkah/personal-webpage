@@ -17,22 +17,22 @@ async function fetchBlogPosts() {
                     
                     // Gunakan thumbnailUrl yang baru ditambahkan atau placeholder jika tidak ada
                     const postHtml = `
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100">
-                                <div class="col-auto d-none d-lg-block">
-                                    <img src="${thumbnailUrl || 'https://placehold.co/600x400/lightgray/white?text=No+Image'}" class="card-img-top" alt="${title}" style="height: 225px; object-fit: cover;">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="col-auto d-none d-lg-block">
+                                <img src="${thumbnailUrl || 'https://placehold.co/600x400/lightgray/white?text=No+Image'}" class="card-img-top" alt="${title}" style="height: 225px; object-fit: cover;">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <strong class="d-inline-block mb-2 text-success">${category || 'Uncategorized'}</strong>
+                                    <small class="text-muted">${formatDate(date)}</small>
                                 </div>
-                                <div class="card-body d-flex flex-column">
-                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                        <strong class="d-inline-block mb-2 text-success">${category || 'Uncategorized'}</strong>
-                                        <small class="text-muted">${formatDate(date)}</small>
-                                    </div>
-                                    <h5 class="card-title">${title}</h5>
-                                    <p class="card-text">${shortDescription || ''}</p>
-                                    <a href="article.html?permalink=${permalink}" class="btn btn-outline-primary mt-auto">Continue reading</a>
-                                </div>
+                                <h5 class="card-title">${title}</h5>
+                                <p class="card-text">${shortDescription || ''}</p>
+                                <a href="article.html?permalink=${permalink}" class="btn btn-outline-primary mt-auto">Continue reading</a>
                             </div>
                         </div>
+                    </div>
                     `;
                     
                     blogPostsContainer.innerHTML += postHtml;

@@ -66,7 +66,7 @@ async function fetchBlogPost() {
         document.getElementById('articleTitle').innerHTML = title;
         document.getElementById('articleDate').innerHTML = formattedDate;
         document.getElementById('articleThumbnail').innerHTML = `
-            <img src="${thumbnailUrl || 'https://placehold.co/800x400/lightgray/white?text=No+Image'}" width="65%" height="auto" alt="${title}" class="img-fluid">
+            <img src="${thumbnailUrl || 'https://placehold.co/800x400/lightgray/white?text=No+Image'}" width="75%" height="auto" alt="${title}" class="img-fluid">
         `;
 
         // Render the article content
