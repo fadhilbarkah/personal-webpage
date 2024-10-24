@@ -7,12 +7,17 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>Fadhil Sasmita</title>
+    <title>Article Detail</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/jumbotron/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <!-- Contentful SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <!-- Rich Text Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@contentful/rich-text-types@16.8.5/dist/blocks.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@contentful/rich-text-html-renderer@16.6.10/dist/rich-text-html-renderer.es5.min.js"></script>
 
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -175,9 +180,9 @@
     <div class="container">
     <header class="d-flex justify-content-center py-3 border-bottom">
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page"><i class="bi bi-house-door-fill"></i></a></li>
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="bi bi-house-door-fill"></i></a></li>
         <li class="nav-item"><a href="about.html" class="nav-link"><i class="bi bi-person-fill"></i></a></li>
-        <li class="nav-item"><a href="blog.html" class="nav-link "><i class="fa-brands fa-blogger-b"></i></a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link active" aria-current="page"><i class="fa-brands fa-blogger-b"></i></a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fa-solid fa-envelope"></i></a></li>
       </ul>
     </header>
@@ -187,128 +192,39 @@
 
 <main>
 
-<!-- Hero Start -->
-<div class="container px-4 py-2">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-        <img src="assets/img/hero.svg" class="d-block mx-lg-auto img-fluid" alt="Hero Image" width="100%" height="auto" loading="lazy">
-      </div>
-      <div class="col-12 col-md-8">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Hello! I'm Fadhil.</h1>
-        <p class="lead">With a background in project management, I’m also exploring web development to expand my technical expertise.</p>
-        <div class="gap-2 d-md-flex justify-content-md-start">
-            <a href="#" class="btn btn btn-outline-secondary my-2">Projects</a>
-            <a href="about.html" class="btn btn btn-outline-secondary my-2">About Me</a>
-            <a href="#" class="btn btn btn-outline-secondary my-2">Resume</a>
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- Hero End -->
-
-<!-- Services Start -->
-<div class="container py-5">
-    <div class="row text-center">
-        <h2 class="mb-4">My Professional Services</h2>
-
-        <div class="col-sm-4 mb-2 mb-sm-0">
-            <div class="card">
-              <div class="card-body p-4">
-                <i class="bi bi-briefcase-fill fs-1"></i>
-                <h5 class="card-title">Project Management</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-4 mb-2 mb-sm-0">
-            <div class="card">
-              <div class="card-body p-4">
-                <i class="bi bi-braces fs-1"></i>
-                <h5 class="card-title">Web Development</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-4 mb-2 mb-sm-0">
-            <div class="card">
-              <div class="card-body p-4">
-                <i class="bi bi-people-fill fs-1"></i>
-                <h5 class="card-title">Private Mentorship</h5>
-              </div>
-            </div>
-          </div>
-
-    </div>
+<!-- Breadcrumb -->
+<div class="container pt-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+         </ol>
+    </nav>
 </div>
-<!-- Services End -->
-
-<!-- Featured Projects Start -->
-<div class="container py-5">
-    <div class="row text-center">
-        <h2 class="mb-4">Featured Projects</h2>
-
-        <div class="col-sm-4 mb-2 mb-sm-0">
-            <div class="card border-0">
-                <img src="assets/img/Project 1.jpg" class="card-img-top img-fluid blur-img rounded-3" alt="Project 1">
-                <div class="card-body fw-bold justify-content-between">
-                    <p>Dashboard Admin</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-4 mb-2 mb-sm-0">
-            <div class="card border-0">
-                <img src="assets/img/Project 2.jpg" class="card-img-top img-fluid blur-img rounded-3" alt="Project 1">
-                <div class="card-body fw-bold">
-                    <p>HRIS Web App</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-4 mb-2 mb-sm-0">
-            <div class="card border-0">
-                <img src="assets/img/Project 3.jpg" class="card-img-top img-fluid blur-img rounded-3" alt="Project 1">
-                <div class="card-body fw-bold">
-                    <p>Daily Routine Mobile App</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-<!-- Featured Projects End -->
-
-<!-- Featured Posts Start -->
-<div class="container py-4">
-    <div class="row mb-2">
-        <h2 class="mb-4 text-center">Featured Posts</h2>
-
-        <div class="row" id="blogPosts">
-          <!-- Posts will be dynamically inserted here -->
-      </div>
-
-      </div>
-
-      <a href="blog.html" class="btn btn btn-outline-primary">view all posts <i class="bi bi-arrow-right-short"></i>
-      </a>
-
-</div>
-<!-- Featured Posts End -->
-
-<!-- CTA Start -->
-<div class="py-5 bg-black">
-    <div class="container-lg py-4 bg-black">
-      <div class="row justify-content-center bg-black">
-        <div class="col-lg-8 text-center bg-black">
-          <p class="text-light fs-5 bg-black">Looking for a developer for your project?</p>
-          <h2 class="fs-1 text-white mb-4 bg-black">I’m Available for Freelance Work!</h2>
-          <a href="contact.html" target="_blank" class="btn btn-primary">Hire Me</a>
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- CTA End -->
+<!-- Breadcrumb End -->
  
+    <!-- Title Article -->
+    <div class="container">
+        <h1 id="articleTitle" class="display-5 fw-bold text-body-emphasis lh-1 mb-3 pt-1 text-md-start"></h1>
+        <p id="articleDate" class="text-muted"></p>
+    </div>
+    <!-- Title Article End -->
+
+    <!-- Thumbnail -->
+    <div class="container pt-2 d-flex justify-content-center" id="articleThumbnail">
+        <!-- Thumbnail image will be inserted here -->
+    </div>
+    <!-- Thumbnail End -->
+
+    <!-- Main Article -->
+    <div class="container pt-5" id="articleContent">
+        <!-- Article content will be inserted here -->
+    </div>
+    <!-- Main Article End -->
+
+<div class="container pt-2">
+    <a href="blog.html"><button type="button" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Back</button></a>
+</div>
 
 </main>
 
@@ -318,7 +234,6 @@
 </footer>
 
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/featuredpost.js"></script>
-
+<script src="assets/js/article.js"></script>
     </body>
 </html>
