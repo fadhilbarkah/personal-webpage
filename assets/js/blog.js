@@ -10,7 +10,8 @@ async function fetchBlogPosts() {
 
         // Pastikan data items ada
         if (data.items && data.items.length) {
-            blogPosts = data.items; // Simpan semua posts
+            // Mengurutkan posts berdasarkan tanggal terbaru terlebih dahulu
+            blogPosts = data.items.sort((a, b) => new Date(b.fields.date) - new Date(a.fields.date));
             displayPosts();
             setupPagination();
         } else {
@@ -65,13 +66,8 @@ function setupPagination() {
     for (let i = 1; i <= totalPages; i++) {
         const pageButton = document.createElement('button');
         pageButton.innerText = i;
-        pageButton.className = 'btn btn-outline-secondary me-2';
+        pageButton.className = `btn btn-outline-secondary me-2 ${i === currentPage ? 'active' : ''}`;
         
-        // Menambahkan kelas active pada halaman saat ini
-        if (i === currentPage) {
-            pageButton.classList.add('active');
-        }
-
         pageButton.onclick = () => {
             currentPage = i;
             displayPosts();
