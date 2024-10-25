@@ -59,6 +59,9 @@ async function fetchBlogPost() {
         const post = data.items[0]; // Get the first article that matches the permalink
         const { title, date, article, thumbnailUrl } = post.fields;
 
+        // Set the browser title to "Article Title | Fadhil Sasmita"
+        document.title = `${title} | Fadhil Sasmita`;
+
         // Format date
         const formattedDate = new Date(date).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' });
 
